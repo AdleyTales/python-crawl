@@ -45,8 +45,11 @@
             len = t.find('.subject-img img').length
             i = 0
             while i < len:
-                res.append({'m_title': t.find('.subject-img img').eq(i).attr('title'),'c_date': t.find('.main-meta').eq(i).text(),'m_rate_val': t.find('.main-title-rating').eq(i).attr('title')})
-                i = i+1
+                res.append({'m_title': t.find('.subject-img img').eq(i).attr('title'),'c_date':
+                
+                 t.find('.main-meta').eq(i).text(),'m_rate_val': t.find('.main-title-rating').eq(i).attr('title')})
+
+                 i = i+1
 
         return res
 
