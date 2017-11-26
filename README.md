@@ -46,7 +46,7 @@
             i = 0
             while i < len:
                 res.append({'m_title': t.find('.subject-img img').eq(i).attr('title'),'c_date':
-                
+
                  t.find('.main-meta').eq(i).text(),'m_rate_val': t.find('.main-title-rating')
                  .eq(i).attr('title')})
 
@@ -132,4 +132,19 @@ cookie 模拟登陆
 
 ### urllib库
 
-pyton3 中改为urllib.request
+注意：pyton3 中改为urllib.request
+
+```py
+  import urllib.request
+
+  res = urllib.request.urlopen('http://blog.csdn.net/flyfish111222/article/details/51886787')
+
+  html = res.read()
+
+  print(html)
+```
+
+爬虫和反爬虫第一步就是设置： User-Agent
+通过request 构造，模拟浏览器请求头。
+
+cookie最主要的作用是模拟登陆后的状态。
